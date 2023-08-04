@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.mybatis.example.mapper.UserMapper">
+
+    <cache />
+
+<!--  <resultMap id="BaseResultMap" type="user" >-->
+<!--    <id property="id" column="id" jdbcType="INTEGER"/>-->
+<!--    <id property="c" column="c" jdbcType="INTEGER"/>-->
+<!--    <id property="d" column="d" jdbcType="INTEGER"/>-->
+<!--  </resultMap>-->
+
+
+<!--  <select id="selectUserById"   resultMap="BaseResultMap" statementType="PREPARED" parameterType="_int" >-->
+<!--        select-->
+<!--         *-->
+<!--         from t where id = #{id}-->
+<!--    </select>-->
+
+
+  <!-- $只能用在自定义类型和map上 -->
+  <select id="selectUserByBean"  resultType="org.mybatis.example.pojo.User">
+        select * from t where c = '${d}'
+    </select>
+
+  <select id="selectUserList" resultType="org.mybatis.example.pojo.User" >
+        select * from t
+    </select>
+
+
+</mapper>
