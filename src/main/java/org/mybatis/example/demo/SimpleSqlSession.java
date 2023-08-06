@@ -34,6 +34,8 @@ public class SimpleSqlSession {
     UserMapper mapper = sqlSession.getMapper(UserMapper.class);
 //    PageHelper.startPage(1,2);
     List<User> list = mapper.selectUserList();
+    List<User> list1 = mapper.selectUserList();
+    System.out.println(list1);
     System.out.println("list.size() = " + list.size());
     System.out.println("-------------");
     System.out.println("list.size() = " + list.size());
