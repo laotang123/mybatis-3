@@ -1,4 +1,4 @@
-package mybatis.example;
+package org.mybatis.example.demo;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -12,9 +12,10 @@ import java.io.InputStream;
 import java.util.List;
 
 /**
- * @author liujf
+ * liujf
+ * 基本demo，测试数据库能联通，能执行查询语句
  */
-public class Test01 {
+public class SimpleSqlSession {
   public static void main(String[] args) throws IOException {
     // 1.获取配置文件
     InputStream in = Resources.getResourceAsStream("mybatis-config.xml");

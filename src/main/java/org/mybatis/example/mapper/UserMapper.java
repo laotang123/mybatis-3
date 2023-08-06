@@ -9,6 +9,4 @@ public interface UserMapper {
 
     public List<User> selectUserList();
 
-
-    public User selectUserById(Integer id);
 }

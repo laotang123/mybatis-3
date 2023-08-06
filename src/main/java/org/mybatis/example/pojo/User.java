@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class User implements Serializable {
 
     private Integer id;
-    private Integer c;
-    private Integer d;
+    private String  name;
+    private Integer age;
 
 }
